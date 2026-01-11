@@ -72,6 +72,27 @@ body {
 }
 
 
+/* ===== video ===== */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 40px 0;
+    padding-top: 56.25%; /* 16:9 */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+
+
+
 /* ===== Abstract gray block ===== */
 .abstract-block {
     margin-top: 120px;
