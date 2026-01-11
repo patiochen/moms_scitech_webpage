@@ -74,18 +74,17 @@ body {
 
 /* ===== Video (居中修复版) ===== */
 .video-wrapper {
-    display: block;        /* 强制作为块级元素，使 margin: auto 生效 */
-    width: 760px;
-    max-width: 95%;        /* 适配移动端，防止溢出屏幕 */
-    margin: 60px auto;     /* 上下60px间距，左右自动平分实现居中 */
-    overflow: hidden;      /* 配合圆角使用 */
+    width: 760px;          /* 保持你设定的宽度 */
+    max-width: 95%;        /* 适配移动端 */
+    margin: 60px auto;     /* 页面上下留白，水平居中 */
+    display: block;
 }
 
-.video-wrapper iframe {
-    width: 100%;           /* 宽度充满父容器的 760px */
-    height: 430px;         /* 保持约 16:9 的比例 */
-    border: 0;
-    border-radius: 8px;    /* 添加圆角增加现代感 */
+.video-wrapper video {
+    width: 100%;           /* 宽度充满父容器 */
+    height: auto;          /* 高度根据比例自适应，防止拉伸 */
+    border-radius: 10px;   /* 增加圆角，更显精致 */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15); /* 增加投影感 */
 }
 
 
