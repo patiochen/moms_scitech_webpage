@@ -94,30 +94,6 @@
     </section>
 
 
-    <!-- Swiper 样式和脚本 -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- 初始化脚本 -->
-    <script>
-      const swiper = new Swiper('.swiper-container', {
-        loop: true,
-        spaceBetween: 40,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    </script>
-
-
     <section class="gray-section">
       <div class="section-header">
         <h2>Architecture and Hardware</h2>
@@ -139,8 +115,50 @@
     </section>
 
 
+    <!-- ======= Sensor Deployment Section ======= -->
+    <section class="white-section">
+      <div class="section-header">
+        <h2>Algorithm Suite</h2>
+      </div>
+
+      <div class="section-content row-layout">
+        <div class="image-col">
+          <img src="figs/algorithm.png" alt="Sensor Deployment Map" class="section-img">
+        </div>
+        <div class="text-col">
+          <p>
+            The deployment strategy places sensor pods along known UAV traffic corridors, ensuring overlapping field-of-view coverage. Each pod operates independently and communicates via local mesh networks to a central processing node.
+          </p>
+        </div>
+      </div>
+    </section>
 
 
+
+
+
+<!-- Swiper 样式和脚本 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 初始化脚本 -->
+    <script>
+      const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        spaceBetween: 40,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
 
 </body>
 </html>
