@@ -16,7 +16,7 @@ body {
 .container {
     max-width: 850px; /* 限制宽度，保持学术紧凑感 */
     margin: 0 auto;
-    padding: 60px 20px 20px 20px; /* 调整顶部间距 */
+    padding: 40px 20px 20px 20px; /* 调整顶部间距 */
     text-align: center;
 }
 
@@ -24,15 +24,16 @@ body {
 .title {
     font-size: 2.2rem;
     font-weight: 800;
-    line-height: 1.25;
-    margin-bottom: 20px;
+    letter-spacing: -1px
+    line-height: 1.1;
+    margin-bottom: 25px;
     color: #1a1a1a;
 }
 
 /* --- 作者链接样式 --- */
 .authors {
-    font-size: 1.3rem;       /* 稍微调大一点，突出作者 */
-    margin-bottom: 12px;
+    font-size: 1.25rem;       /* 稍微调大一点，突出作者 */
+    margin-bottom: 8px;
     font-weight: 500;
 }
 
@@ -50,21 +51,21 @@ body {
 
 /* --- 机构与会议信息 (三行结构) --- */
 .affiliations {
-    font-size: 1.15rem;      /* 字号比作者略小 */
-    line-height: 1.5;        /* 行间距 */
-    color: #444;             /* 深灰色，比正文更有质感 */
-    margin-bottom: 40px;     /* 与下方按钮的距离 */
+    font-size: 1.1rem;      /* 字号比作者略小 */
+    line-height: 1.4;        /* 行间距 */
+    color: #555;             /* 深灰色，比正文更有质感 */
+    margin-bottom: 35px;     /* 与下方按钮的距离 */
 }
 
 .affiliations p {
-    margin: 4px 0;           /* 每行信息之间的小间距 */
+    margin: 2px 0;           /* 每行信息之间的小间距 */
 }
 
 /* 专门给会议名称加一个样式（可选） */
 .venue {
     font-style: italic;      /* 会议名称通常用斜体，显得更正式 */
-    font-weight: 500;
-    color: #222;
+    font-weight: 600;
+    color: #333;
 }
 
 /* 胶囊按钮组 */
