@@ -14,7 +14,7 @@ body {
    2. 顶部容器 (标题、作者、按钮、视频)
    ========================================= */
 .container {
-    max-width: 850px; /* 限制宽度，保持学术紧凑感 */
+    max-width: 800px; /* 限制宽度，保持学术紧凑感 */
     margin: 0 auto;
     padding: 40px 20px 20px 20px; /* 调整顶部间距 */
     text-align: center;
