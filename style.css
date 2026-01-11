@@ -151,97 +151,109 @@ body {
 /* result figs */
 /* 轮播区域外层 */
 .carousel-section {
-    padding: 60px 0;
-    background-color: #ffffff;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
-/* 轮播主容器 */
-.image-swiper {
-    width: 100%;
-    /* 移除固定的 height: 560px */
-    padding: 20px 0 60px 0; /* 底部留够 60px 给圆点 */
-    position: relative;
-    overflow: visible; /* 核心：允许箭头稍微溢出，看起来更舒展 */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  overflow: hidden;
+  background: white;
+  border-radius: 12px;
 }
 
-.swiper-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 0.3; /* 非当前的图片变淡 */
-    transition: opacity 0.3s;
+.carousel-slide {
+  display: none;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
-.swiper-slide-active {
-    opacity: 1; /* 当前图片全亮 */
+.carousel-slide.active {
+  display: flex;
 }
 
-.swiper-slide img {
-    width: 100%;
-    max-width: 900px; /* 限制图片最大宽度 */
-    height: auto;
-    object-fit: contain;
-    border-radius: 4px;
-    /* 给图片加一个极其淡的阴影，增加质感 */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+.carousel-slide img {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
 }
 
-/* 图片下方的文字说明 */
-.slide-caption {
-    margin-top: 25px;
-    font-size: 1rem;
-    color: #555;
-    max-width: 800px;
-    line-height: 1.6;
-    text-align: center;
+/* 圆形按钮 */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* --- 左右箭头：模仿 DeepSIM 的精致感 --- */
-.swiper-button-prev,
-.swiper-button-next {
-    width: 48px;
-    height: 48px;
-    background-color: rgba(255, 255, 255, 0.8) !important;
-    backdrop-filter: blur(4px); /* 背景模糊，非常现代 */
-    border: 1px solid #eee;
-    border-radius: 50%;
-    color: #000 !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    top: 45% !important; /* 箭头垂直居中偏上一点 */
+.carousel-btn:hover {
+  background: white;
 }
 
-/* 箭头内的小图标变小 */
-.swiper-button-prev::after,
-.swiper-button-next::after {
-    font-size: 18px !important;
-    font-weight: bold;
+.carousel-btn.prev {
+  left: 10px;
 }
 
-/* 箭头位置调整：向外推 */
-.swiper-button-prev { left: -24px !important; }
-.swiper-button-next { right: -24px !important; }
-
-/* 悬停时稍微变大 */
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-    background-color: #fff !important;
-    transform: scale(1.1);
+.carousel-btn.next {
+  right: 10px;
 }
 
-/* --- 分页小圆点 --- */
-.swiper-pagination {
-    bottom: 10px !important;
+/* 三角形箭头 */
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
 }
 
-.swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    background: #000;
-    opacity: 0.2;
-    margin: 0 6px !important;
+.triangle.left {
+  border-width: 8px 12px 8px 0;
+  border-color: transparent #333 transparent transparent;
+  margin-left: 4px;
 }
 
-.swiper-pagination-bullet-active {
-    opacity: 1;
-    background: #4385f4; /* 使用你的作者名蓝色 */
+.triangle.right {
+  border-width: 8px 0 8px 12px;
+  border-color: transparent transparent transparent #333;
+  margin-right: 4px;
 }
+
+/* 圆点指示器 */
+.carousel-dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: #aaa;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.carousel-dots button.active {
+  background: #333;
+  opacity: 1;
+}
+
