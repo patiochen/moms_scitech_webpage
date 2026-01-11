@@ -29,17 +29,42 @@ body {
     color: #1a1a1a;
 }
 
-/* 作者与机构 */
+/* --- 作者链接样式 --- */
 .authors {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-    color: #4385f4; /* 蓝色作者名 */
+    font-size: 1.3rem;       /* 稍微调大一点，突出作者 */
+    margin-bottom: 12px;
+    font-weight: 500;
 }
 
+.authors a {
+    color: #4385f4;          /* 采用图片中那种 Google Blue */
+    text-decoration: none;   /* 默认去掉下划线 */
+    margin: 0 8px;           /* 作者名之间的间距 */
+    transition: color 0.2s;
+}
+
+.authors a:hover {
+    text-decoration: underline; /* 鼠标悬停时出现下划线 */
+    color: #1a73e8;
+}
+
+/* --- 机构与会议信息 (三行结构) --- */
 .affiliations {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    color: #666;
+    font-size: 1.15rem;      /* 字号比作者略小 */
+    line-height: 1.5;        /* 行间距 */
+    color: #444;             /* 深灰色，比正文更有质感 */
+    margin-bottom: 40px;     /* 与下方按钮的距离 */
+}
+
+.affiliations p {
+    margin: 4px 0;           /* 每行信息之间的小间距 */
+}
+
+/* 专门给会议名称加一个样式（可选） */
+.venue {
+    font-style: italic;      /* 会议名称通常用斜体，显得更正式 */
+    font-weight: 500;
+    color: #222;
 }
 
 /* 胶囊按钮组 */
