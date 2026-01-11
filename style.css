@@ -72,33 +72,19 @@ body {
 }
 
 
-/* ===== Video ===== */
-/* 外层“画框” */
-.video-frame {
-    background: #000;              /* 黑边 */
-    padding: 24px;                 /* 边框厚度 */
-    max-width: 820px;              /* 整个 figure 宽度 */
-    margin: 60px auto;
-    border-radius: 6px;
-}
-
-/* 内部视频区域 */
+/* ===== Video (SAFE VERSION) ===== */
 .video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%;           /* 16:9 */
+    width: 760px;          /* 关键：直接定宽，像你给的图 */
+    max-width: 100%;
+    margin: 60px auto;     /* 居中 */
 }
 
 .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: 430px;         /* 760 * 9 / 16 ≈ 427 */
+    border: 0;
+    border-radius: 8px;
 }
-
-
-
 
 
 
