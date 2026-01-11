@@ -127,9 +127,9 @@ body {
 }
 
 .abstract-section {
-    max-width: 850px;          /* 确保文字宽度和上方标题对齐 */
+    max-width: 800px;          /* 确保文字宽度和上方标题对齐 */
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 40px;
 }
 
 .abstract-title {
