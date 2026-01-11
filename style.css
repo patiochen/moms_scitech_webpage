@@ -95,36 +95,32 @@ body {
 
 
 
-/* ===== Abstract gray block ===== */
-.abstract-block {
-    margin-top: 120px;
-    padding: 80px 0;
-    background: #f7f8fa;   /* 关键：浅灰，不要太深 */
+/* ===== Abstract Section (横栏版) ===== */
+.abstract-container {
+    width: 100%;             /* 占据全宽 */
+    background-color: #f9f9f9; /* 浅灰色背景，区分视频区域 */
+    padding: 40px 0;         /* 缩小上下间距，去掉左右死板的格子边距 */
+    margin-top: 20px;        /* 调整与上方视频的间距 */
 }
 
-/* 内部正文区域 */
-.abstract-section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 24px;
+.abstract-content {
+    max-width: 800px;        /* 限制文字宽度，方便阅读 */
+    margin: 0 auto;          /* 居中内容 */
+    padding: 0 20px;         /* 移动端留白 */
+    text-align: justify;     /* 文字对齐，看起来更专业 */
 }
 
-/* 标题 */
-.abstract-title {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 600;
+.abstract-content h2 {
+    text-align: center;      /* 标题居中 */
+    font-size: 2rem;
+    margin-bottom: 25px;     /* 标题与正文的距离 */
+    color: #333;
+}
+
+.abstract-content p {
+    line-height: 1.6;        /* 增加行间距，学术论文标配 */
     color: #555;
-    margin-bottom: 36px;
-}
-
-/* 正文 */
-.abstract-text {
-    font-size: 18px;
-    line-height: 1.85;
-    color: #6b7280;
-    text-align: left;
-    margin: 0;
+    font-size: 1.1rem;
 }
 
 
