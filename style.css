@@ -149,111 +149,62 @@ body {
 
 
 /* result figs */
-/* 轮播区域外层 */
 .carousel-section {
-  max-width: 1000px;
-  margin: 60px auto;
+  max-width: 1100px;
+  margin: 60px auto 100px auto;
   padding: 0 20px;
 }
 
-.carousel-container {
-  position: relative;
+.swiper-container {
   width: 100%;
-  height: 540px;
-  overflow: hidden;
-  background: white;
-  border-radius: 12px;
+  height: 560px;
+  position: relative;
 }
 
-.carousel-slide {
-  display: none;
-  height: 100%;
+.swiper-slide {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.carousel-slide.active {
-  display: flex;
-}
-
-.carousel-slide img {
+.swiper-slide img {
   max-width: 100%;
-  max-height: 500px;
+  max-height: 520px;
   object-fit: contain;
 }
 
-/* 圆形按钮 */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
-  background: rgba(255,255,255,0.9);
-  border: none;
+/* 小圆点分页样式 */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #bbb;
+  opacity: 0.6;
+  margin: 0 5px !important;
   border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  cursor: pointer;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel-btn:hover {
-  background: white;
-}
-
-.carousel-btn.prev {
-  left: 10px;
-}
-
-.carousel-btn.next {
-  right: 10px;
-}
-
-/* 三角形箭头 */
-.triangle {
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.triangle.left {
-  border-width: 8px 12px 8px 0;
-  border-color: transparent #333 transparent transparent;
-  margin-left: 4px;
-}
-
-.triangle.right {
-  border-width: 8px 0 8px 12px;
-  border-color: transparent transparent transparent #333;
-  margin-right: 4px;
-}
-
-/* 圆点指示器 */
-.carousel-dots {
-  position: absolute;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-}
-
-.carousel-dots button {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: none;
-  background: #aaa;
-  opacity: 0.5;
-  cursor: pointer;
   transition: 0.2s;
 }
 
-.carousel-dots button.active {
-  background: #333;
+.swiper-pagination-bullet-active {
+  background: #000;
   opacity: 1;
+  transform: scale(1.2);
 }
+
+/* 左右按钮样式 */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  color: #333;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 

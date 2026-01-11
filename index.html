@@ -69,62 +69,54 @@
     </section>
 
     <section class="carousel-section">
-      <div class="carousel-container">
-        <div class="carousel-slide active">
-          <img src="figs/classification.png" alt="Image 1">
-        </div>
-        <div class="carousel-slide">
-          <img src="figs/traj.png" alt="Image 2">
-        </div>
-        <div class="carousel-slide">
-          <img src="figs/3d.png" alt="Image 3">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <img src="figs/classification.png" alt="Image 1">
+          </div>
+          <div class="swiper-slide">
+            <img src="figs/traj.png" alt="Image 2">
+          </div>
+          <div class="swiper-slide">
+            <img src="figs/3d.png" alt="Image 3">
+          </div>
+
         </div>
 
-        <button class="carousel-btn prev" onclick="changeSlide(-1)">
-          <span class="triangle left"></span>
-        </button>
-        <button class="carousel-btn next" onclick="changeSlide(1)">
-          <span class="triangle right"></span>
-        </button>
+        <!-- 分页圆点 -->
+        <div class="swiper-pagination"></div>
 
-        <div class="carousel-dots" id="carouselDots"></div>
+        <!-- 左右按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </section>
 
+
+    <!-- Swiper 样式和脚本 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 初始化脚本 -->
     <script>
-      let currentSlide = 0;
-
-      function showSlide(index) {
-        const slides = document.querySelectorAll('.carousel-slide');
-        const dots = document.querySelectorAll('.carousel-dots button');
-        if (index >= slides.length) currentSlide = 0;
-        else if (index < 0) currentSlide = slides.length - 1;
-        else currentSlide = index;
-
-        slides.forEach((s, i) => s.classList.toggle('active', i === currentSlide));
-        dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
-      }
-
-      function changeSlide(n) {
-        showSlide(currentSlide + n);
-      }
-
-      function initDots() {
-        const dotContainer = document.getElementById('carouselDots');
-        const slides = document.querySelectorAll('.carousel-slide');
-        slides.forEach((_, i) => {
-          const dot = document.createElement('button');
-          dot.onclick = () => showSlide(i);
-          if (i === 0) dot.classList.add('active');
-          dotContainer.appendChild(dot);
-        });
-      }
-
-      document.addEventListener('DOMContentLoaded', () => {
-        initDots();
-        showSlide(0);
+      const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        spaceBetween: 40,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
       });
     </script>
+
 
 
 
