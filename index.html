@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -66,6 +67,49 @@
             </p>
         </div>
     </section>
+
+    <section class="carousel-section">
+        <div class="swiper image-swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="figs/classfication.png" alt="Figure 1">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="figs/traj.png" alt="Figure 2">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="figs/traj.png" alt="Figure 3">
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        new Swiper('.image-swiper', {
+            loop: true,
+            spaceBetween: 40,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+
 
 </body>
 </html>
