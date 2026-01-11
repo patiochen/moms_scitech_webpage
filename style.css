@@ -1,128 +1,118 @@
+/* 全局样式重置 */
 body {
+    font-family: 'Inter', -apple-system, sans-serif;
     margin: 0;
     padding: 0;
-    background: #ffffff;
-    font-family: -apple-system, BlinkMacSystemFont,
-                 "Segoe UI", Helvetica, Arial, sans-serif;
-    color: #000;
+    line-height: 1.5;
+    background-color: #ffffff;
+    color: #222;
 }
 
+/* 顶部内容容器 */
 .container {
-    max-width: 1200px;
+    max-width: 900px; /* 标题和视频的显示宽度 */
     margin: 0 auto;
-    padding: 80px 40px 60px;
+    padding: 80px 20px 40px 20px; /* 增加顶部的留白，更高级 */
     text-align: center;
 }
 
-/* ===== Title ===== */
+/* 主标题：MeshVPR/DeepSIM 风格 */
 .title {
-    font-size: 3rem;       /* 调整大小 */
+    font-size: 2.6rem;
     font-weight: 800;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    color: #333;
+    letter-spacing: -1px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+    color: #1a1a1a;
 }
 
-/* ===== Author ===== */
+/* 作者与机构 */
 .authors {
-    font-size: 22px;
-    color: #1e90ff;
-    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #4385f4; /* 蓝色作者名 */
 }
 
-/* ===== Affiliation ===== */
 .affiliations {
-    font-size: 20px;
-    color: #555;
-    margin: 10px 0 46px;
+    font-size: 1.15rem;
+    margin-bottom: 40px;
+    color: #666;
 }
 
-
-/* ===== Buttons ===== */
+/* 胶囊型按钮 */
 .buttons {
     display: flex;
     justify-content: center;
+    gap: 15px;
     flex-wrap: wrap;
-    gap: 18px;
+    margin-bottom: 50px;
 }
 
 .btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-
-    padding: 14px 28px;
-    background: #000;
-    color: #fff;
-
-    border-radius: 999px;
+    gap: 8px;
+    padding: 10px 22px;
+    background-color: #333;
+    color: white !important;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-
-    transition: transform 0.15s ease,
-                box-shadow 0.15s ease;
-}
-
-.btn i {
-    font-size: 18px;
+    border-radius: 30px; /* 胶囊圆角 */
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
+    background-color: #000;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-
-/* ===== Video (居中修复版) ===== */
+/* 视频区域 */
 .video-wrapper {
-    width: 760px;
-    max-width: 95%;
-    margin: 60px auto;
-    transition: transform 0.3s ease; /* 增加平滑过渡效果 */
-}
-
-/* 当鼠标放上去时，整个视频容器轻微放大 */
-.video-wrapper:hover {
-    transform: scale(1.02); /* 放大 1.02 倍 */
+    width: 100%;
+    margin: 20px 0;
 }
 
 .demo-video {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    display: block;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* 柔和的大阴影 */
+    background: #000;
 }
 
-
-
-/* ===== Abstract Section (横栏版) ===== */
-.abstract-container {
-    width: 100%;             /* 占据全宽 */
-    background-color: #f9f9f9; /* 浅灰色背景，区分视频区域 */
-    padding: 40px 0;         /* 缩小上下间距，去掉左右死板的格子边距 */
-    margin-top: 20px;        /* 调整与上方视频的间距 */
+/* Abstract 横栏部分 */
+.abstract-block {
+    width: 100%;
+    background-color: #f8f9fa; /* 极浅灰背景 */
+    padding: 80px 0;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
 }
 
-.abstract-content {
-    max-width: 800px;        /* 限制文字宽度，方便阅读 */
-    margin: 0 auto;          /* 居中内容 */
-    padding: 0 20px;         /* 移动端留白 */
-    text-align: justify;     /* 文字对齐，看起来更专业 */
+.abstract-content-wrapper {
+    max-width: 800px; /* 摘要文字窄一点更方便阅读 */
+    margin: 0 auto;
+    padding: 0 30px;
 }
 
-.abstract-content h2 {
-    text-align: center;      /* 标题居中 */
+.abstract-title {
     font-size: 2rem;
-    margin-bottom: 25px;     /* 标题与正文的距离 */
-    color: #333;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
-.abstract-content p {
-    line-height: 1.6;        /* 增加行间距，学术论文标配 */
-    color: #555;
+.abstract-text {
     font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify; /* 两端对齐 */
+    color: #444;
 }
 
-
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .title { font-size: 1.8rem; }
+    .container { padding-top: 40px; }
+}

@@ -2,87 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MOMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOMS Project Page</title>
 
-    <!-- Font Awesome icons -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<div class="container">
 
-    <!-- Title -->
-    <h1 class="title">
-        Simultaneous Track-Monitoring of Multiple Mobile Airspace Objects<br>
-        Using Non-Collocated Video Sensors
-    </h1>
+    <div class="container">
 
-    <!-- Author -->
-    <p class="authors">
-        Chenyan Zhu
-    </p>
+        <h1 class="title">
+            Simultaneous Track-Monitoring of Multiple Mobile Airspace Objects<br>
+            Using Non-Collocated Video Sensors
+        </h1>
 
-    <!-- Affiliation -->
-    <p class="affiliations">
-        Texas A&amp;M University
-    </p>
+        <p class="authors">Chenyan Zhu</p>
+        <p class="affiliations">Texas A&M University</p>
 
-    <!-- Buttons -->
-    <div class="buttons">
+        <div class="buttons">
+            <a class="btn" href="paper.pdf" target="_blank">
+                <i class="fa-regular fa-file-pdf"></i> Paper
+            </a>
+            <a class="btn" href="https://arxiv.org" target="_blank">
+                <i class="fa-solid fa-file-lines"></i> arXiv
+            </a>
+            <a class="btn" href="https://youtube.com" target="_blank">
+                <i class="fa-brands fa-youtube"></i> Video
+            </a>
+            <a class="btn" href="https://github.com/yourname/yourrepo" target="_blank">
+                <i class="fa-brands fa-github"></i> Code
+            </a>
+            <a class="btn" href="data.zip" target="_blank">
+                <i class="fa-solid fa-database"></i> Data
+            </a>
+        </div>
 
-        <a class="btn" href="paper.pdf" target="_blank">
-            <i class="fa-regular fa-file-pdf"></i> Paper
-        </a>
+        <div class="video-wrapper">
+            <video
+                controls
+                autoplay
+                loop
+                muted
+                playsinline
+                class="demo-video">
+                <source src="Video/detetcion.mp4" type="video/mp4">
+                您的浏览器不支持 HTML5 视频。
+            </video>
+        </div>
 
-        <a class="btn" href="https://arxiv.org" target="_blank">
-            <i class="fa-solid fa-xmark"></i> arXiv
-        </a>
+    </div> <section class="abstract-block">
+        <div class="abstract-content-wrapper">
+            <h2 class="abstract-title">Abstract</h2>
+            <p class="abstract-text">
+                As dense uncrewed aircraft system (UAS) operations become more prevalent, there is a growing need for ground-based monitoring of multiple heterogeneous airspace objects (including UASs, crewed aircraft, birds, and projectiles) in airspace volumes. Monitoring needs in these settings are often track- (trajectory-) centered, encompassing: 1) fast detection of objects that impinge on the airspace, 2) recording and differentiation of multiple object tracks in sensing data, 3) matching and location of the tracks in geographical coordinates using multiple sensors, and 4) real-time alarming of object conflicts and other scenarios of concern. This article reports on a distributed system for real-time track-based monitoring of multiple mobile airspace objects, which uses video cameras arranged in two or more non-collocated pods for monitoring. The distributed architecture of the monitoring system is described, and the methods/algorithms used for comprehensive track monitoring are developed. Multi-track monitoring is demonstrated in the scope of two flight campaigns involving multi-UAS operations, conducted near Fairbanks, Alaska, as well as demonstrations in Langley, Virginia and College Station, TX.
+            </p>
+        </div>
+    </section>
 
-        <a class="btn" href="https://youtube.com" target="_blank">
-            <i class="fa-brands fa-youtube"></i> Video
-        </a>
-
-        <a class="btn" href="https://github.com/yourname/yourrepo" target="_blank">
-            <i class="fa-brands fa-github"></i> Code
-        </a>
-
-        <a class="btn" href="data.zip" target="_blank">
-            <i class="fa-regular fa-image"></i> Data
-        </a>
-
-    </div>
-
-
-
-
-<div class="video-wrapper">
-    <video
-        controls
-        autoplay
-        loop
-        muted
-        playsinline
-        class="demo-video">
-        <source src="Video/detetcion.mp4" type="video/mp4">
-        您的浏览器不支持 HTML5 视频。
-    </video>
-</div>
-
-
-<!-- Abstract block -->
-<section class="abstract-block">
-    <div class="abstract-section">
-        <h2 class="abstract-title">Abstract</h2>
-        <p class="abstract-text">
-            As dense uncrewed aircraft system (UAS) operations become more prevalent, there is agrowing need for ground-based monitoring of multiple heterogeneous airspace objects(including UASs, crewed aircraft, birds, and projectiles) in airspace volumes. Monitoringneeds in these settings are often track- (trajectory-) centered, encompassing: 1) fast detectionof objects that impinge on the airspace, 2) recording and differentiation of multiple objecttracks in sensing data, 3) matching and location of the tracks in geographical coordinates usingmultiple sensors, and 4) real-time alarming of object conflicts and other scenarios ofconcern. This article reports on a distributed system for real-time track-based monitoring ofmultiple mobile airspace objects, which uses video cameras arranged in two or more noncollocatedpods for monitoring. The distributed architecture of the monitoring system isdescribed, and the methods/algorithms used for comprehensive track monitoring aredeveloped. Multi-track monitoring is demonstrated in the scope of two flight campaignsinvolving multi-UAS operations, conducted near Fairbanks, Alaska, as well as demonstrationsin Langley, Virginia and College Station, TX.
-        </p>
-    </div>
-</section>
-
-
-</div>
 </body>
 </html>
