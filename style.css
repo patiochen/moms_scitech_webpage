@@ -74,17 +74,23 @@ body {
 
 /* ===== Video (居中修复版) ===== */
 .video-wrapper {
-    width: 760px;          /* 保持你设定的宽度 */
-    max-width: 95%;        /* 适配移动端 */
-    margin: 60px auto;     /* 页面上下留白，水平居中 */
-    display: block;
+    width: 760px;
+    max-width: 95%;
+    margin: 60px auto;
+    transition: transform 0.3s ease; /* 增加平滑过渡效果 */
 }
 
-.video-wrapper video {
-    width: 100%;           /* 宽度充满父容器 */
-    height: auto;          /* 高度根据比例自适应，防止拉伸 */
-    border-radius: 10px;   /* 增加圆角，更显精致 */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15); /* 增加投影感 */
+/* 当鼠标放上去时，整个视频容器轻微放大 */
+.video-wrapper:hover {
+    transform: scale(1.02); /* 放大 1.02 倍 */
+}
+
+.demo-video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    display: block;
 }
 
 
