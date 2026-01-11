@@ -72,13 +72,21 @@ body {
 }
 
 
-/* ===== Abstract Section (Paper-style) ===== */
+/* ===== Abstract gray block ===== */
+.abstract-block {
+    margin-top: 120px;
+    padding: 80px 0;
+    background: #f7f8fa;   /* 关键：浅灰，不要太深 */
+}
+
+/* 内部正文区域 */
 .abstract-section {
-    margin: 120px auto 0;
+    max-width: 900px;
+    margin: 0 auto;
     padding: 0 24px;
 }
 
-/* 标题：居中、克制 */
+/* 标题 */
 .abstract-title {
     text-align: center;
     font-size: 32px;
@@ -87,15 +95,13 @@ body {
     margin-bottom: 36px;
 }
 
-/* 正文：窄列 + 浅灰 + 大行距 */
+/* 正文 */
 .abstract-text {
-    max-width: 820px;          /* 关键：控制列宽 */
-    margin: 0 auto;
-
     font-size: 18px;
-    line-height: 1.85;         /* 关键：论文感 */
-    color: #6b7280;            /* 比纯黑高级很多 */
-
+    line-height: 1.85;
+    color: #6b7280;
     text-align: left;
+    margin: 0;
 }
+
 
