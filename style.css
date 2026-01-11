@@ -23,30 +23,20 @@ body {
     color: #333;
 }
 
+/* ===== Author ===== */
 .authors {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 22px;
+    color: #1e90ff;
+    margin: 0;
 }
 
-.authors a {
-    color: #4385f4;        /* 经典的蓝色链接色 */
-    text-decoration: none;
-}
-
-.authors a:hover {
-    text-decoration: underline;
-}
-
-/* 机构信息：小一点，灰色 */
+/* ===== Affiliation ===== */
 .affiliations {
-    font-size: 1.1rem;
+    font-size: 20px;
     color: #555;
-    margin-bottom: 30px;
+    margin: 10px 0 46px;
 }
 
-.affiliations span {
-    margin: 0 10px;        /* 机构之间的间距 */
-}
 
 /* ===== Buttons ===== */
 .buttons {
