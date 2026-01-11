@@ -72,12 +72,12 @@ body {
 }
 
 
-/* ===== video ===== */
+/* ===== Video ===== */
 .video-wrapper {
     position: relative;
     width: 100%;
     max-width: 900px;
-    margin: 40px 0;
+    margin: 60px auto;
     padding-top: 56.25%; /* 16:9 */
 }
 
