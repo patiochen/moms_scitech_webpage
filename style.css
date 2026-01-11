@@ -1,59 +1,47 @@
 body {
     margin: 0;
     padding: 0;
-    background: #fff;
+    background: #ffffff;
     font-family: -apple-system, BlinkMacSystemFont,
                  "Segoe UI", Helvetica, Arial, sans-serif;
     color: #000;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 70px 40px;
+    padding: 80px 40px 60px;
     text-align: center;
 }
 
-/* Title */
+/* ===== Title ===== */
 .title {
     font-size: 56px;
     font-weight: 800;
-    margin: 0;
+    line-height: 1.25;
+    margin: 0 0 28px 0;
 }
 
-.subtitle {
-    font-size: 32px;
-    font-weight: 400;
-    margin: 16px 0 28px;
-}
-
-/* Authors */
+/* ===== Author ===== */
 .authors {
     font-size: 22px;
+    color: #1e90ff;
     margin: 0;
 }
 
-.authors a {
-    color: #1e90ff;
-    text-decoration: none;
-}
-
-.authors a:hover {
-    text-decoration: underline;
-}
-
-/* Affiliations */
+/* ===== Affiliation ===== */
 .affiliations {
     font-size: 20px;
-    margin: 10px 0 40px;
+    color: #555;
+    margin: 10px 0 46px;
 }
 
-/* Buttons */
+/* ===== Buttons ===== */
 .buttons {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
+    flex-wrap: wrap;
+    gap: 18px;
 }
 
 .btn {
@@ -61,7 +49,7 @@ body {
     align-items: center;
     gap: 10px;
 
-    padding: 14px 26px;
+    padding: 14px 28px;
     background: #000;
     color: #fff;
 
@@ -70,7 +58,8 @@ body {
     font-size: 18px;
     font-weight: 500;
 
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: transform 0.15s ease,
+                box-shadow 0.15s ease;
 }
 
 .btn i {
@@ -79,5 +68,5 @@ body {
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
