@@ -16,24 +16,36 @@ body {
 
 /* ===== Title ===== */
 .title {
-    font-size: 56px;
+    font-size: 3rem;       /* 调整大小 */
     font-weight: 800;
-    line-height: 1.25;
-    margin: 0 0 28px 0;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #333;
 }
 
-/* ===== Author ===== */
 .authors {
-    font-size: 22px;
-    color: #1e90ff;
-    margin: 0;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
-/* ===== Affiliation ===== */
+.authors a {
+    color: #4385f4;        /* 经典的蓝色链接色 */
+    text-decoration: none;
+}
+
+.authors a:hover {
+    text-decoration: underline;
+}
+
+/* 机构信息：小一点，灰色 */
 .affiliations {
-    font-size: 20px;
+    font-size: 1.1rem;
     color: #555;
-    margin: 10px 0 46px;
+    margin-bottom: 30px;
+}
+
+.affiliations span {
+    margin: 0 10px;        /* 机构之间的间距 */
 }
 
 /* ===== Buttons ===== */
