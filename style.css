@@ -148,7 +148,357 @@ body {
 }
 
 
+/* result figs *//* =========================================
+   1. 全局基础设置
+   ========================================= */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* =========================================
+   2. 顶部容器 (标题、作者、按钮、视频)
+   ========================================= */
+.container {
+    max-width: 800px; /* 限制宽度，保持学术紧凑感 */
+    margin: 0 auto;
+    padding: 40px 20px 20px 20px; /* 调整顶部间距 */
+    text-align: center;
+}
+
+/* 标题：调小了字号，增加了粗度 */
+.title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -1px
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+/* --- 作者链接样式 --- */
+.authors {
+    font-size: 1.25rem;       /* 稍微调大一点，突出作者 */
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.authors a {
+    color: #4385f4;          /* 采用图片中那种 Google Blue */
+    text-decoration: none;   /* 默认去掉下划线 */
+    margin: 0 8px;           /* 作者名之间的间距 */
+    transition: color 0.2s;
+}
+
+.authors a:hover {
+    text-decoration: underline; /* 鼠标悬停时出现下划线 */
+    color: #1a73e8;
+}
+
+/* --- 机构与会议信息 (三行结构) --- */
+.affiliations {
+    font-size: 1.1rem;      /* 字号比作者略小 */
+    line-height: 1.4;        /* 行间距 */
+    color: #555;             /* 深灰色，比正文更有质感 */
+    margin-bottom: 35px;     /* 与下方按钮的距离 */
+}
+
+.affiliations p {
+    margin: 2px 0;           /* 每行信息之间的小间距 */
+}
+
+/* 专门给会议名称加一个样式（可选） */
+.venue {
+    font-style: italic;      /* 会议名称通常用斜体，显得更正式 */
+    font-weight: 600;
+    color: #333;
+}
+
+/* 胶囊按钮组 */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    background-color: #333;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 30px; /* 完美的胶囊形状 */
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #000;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   3. 视频区域
+   ========================================= */
+.video-wrapper {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.demo-video {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* 柔和阴影 */
+    outline: none;
+}
+
+/* =========================================
+   4. Abstract 横栏区域 (关键修改)
+   ========================================= */
+/* 注意：要在 HTML 中将 <section class="abstract-block">
+   放在 <div class="container"> 的闭合标签 </div> 之后
+*/
+.abstract-block {
+    width: 100%;
+    background-color: #f8f9fa; /* 极浅灰色的横栏背景 */
+    padding: 60px 0;           /* 上下大留白 */
+    margin-top: 50px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.abstract-section {
+    max-width: 800px;          /* 确保文字宽度和上方标题对齐 */
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.abstract-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #222;
+}
+
+.abstract-text {
+    font-size: 1.05rem;
+    line-height: 1.8;          /* 增加行间距，提升阅读体验 */
+    text-align: justify;       /* 两端对齐，学术页面必备 */
+    color: #444;
+}
+
+
 /* result figs */
+.carousel-section {
+  max-width: 1100px;
+  margin: 60px auto 100px auto;
+  padding: 0 20px;
+}
+
+.swiper-container {
+  width: 100%;
+  max-width: 1100px;   /* 固定最大宽度，避免超出 */
+  margin: 0 auto;       /* 居中 */
+  height: 560px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;          /* 💥 关键 */
+  overflow: hidden;         /* 💥 关键 */
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  display: block;
+}
+
+/* 小圆点分页样式 */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #bbb;
+  opacity: 0.6;
+  margin: 0 5px !important;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.swiper-pagination-bullet-active {
+  background: #000;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* 左右按钮样式 */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  color: #333;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+/* ======= Gray Section (like Abstract) ======= */
+.gray-section {
+  background-color: #f5f5f5;
+  padding: 60px 20px 80px 20px;
+  width: 100%;
+  overflow-x: hidden;  /* 加上这个 */
+}
+
+.section-header {
+  max-width: 1100px;
+  margin: 0 auto 30px auto;
+  padding: 0 20px;
+}
+
+.section-header h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* 正文段落样式 */
+.section-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.section-img {
+  display: block;
+  margin: 0 auto 30px auto;
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+
+
+/* white section */
+
+.white-section {
+  background: #ffffff;  /* 保持默认背景 */
+  padding: 60px 20px 80px 20px;
+}
+
+.section-header {
+  max-width: 1100px;
+  margin: 0 auto 30px auto;
+  padding: 0 20px;
+}
+
+.section-header h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.row-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.image-col {
+  flex: 1 1 40%;
+}
+
+.text-col {
+  flex: 1 1 55%;
+}
+
+.section-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+
+/* citation */
+.citation-section {
+  background: #fff;
+  padding: 60px 20px 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.bibtex-block {
+  background: #f5f5f5;
+  padding: 20px 24px;
+  border-radius: 6px;
+  font-family: Menlo, Consolas, monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: auto;
+  margin-bottom: 30px;
+}
+
+.section-header h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.credits {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.credits a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.credits a:hover {
+  text-decoration: underline;
+}
+
 .carousel-section {
   max-width: 1100px;
   margin: 60px auto 100px auto;
