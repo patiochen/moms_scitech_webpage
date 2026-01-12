@@ -203,14 +203,6 @@ body {
   color: #333;
 }
 
-.swiper-button-prev {
-  left: 40px;
-}
-
-.swiper-button-next {
-  right: 40px;
-}
-
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 18px;
