@@ -240,7 +240,8 @@
                     icon.classList.remove("fa-check");
                     icon.classList.add("fa-copy");
                     // 还原按钮颜色
-                    button.style.backgroundColor = "";
+                    icon.style.color = "";
+                    button.style.opacity = "";
                 }, 1500);
             }).catch(err => {
                 console.error('无法复制: ', err);
