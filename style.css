@@ -202,16 +202,6 @@ body {
 }
 
 
-/* 所有按钮内缩固定距离（不贴边） */
-.swiper-button-prev {
-  left: 70px !important;
-}
-
-.swiper-button-next {
-  right: 70px !important;
-}
-
-
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 18px;
