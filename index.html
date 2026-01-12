@@ -29,11 +29,8 @@
         </div>
 
         <div class="buttons">
-            <a class="btn" href="paper.pdf" target="_blank">
+            <a class="btn" href="https://arc.aiaa.org/doi/10.2514/6.2026-2890" target="_blank">
                 <i class="fa-regular fa-file-pdf"></i> Paper
-            </a>
-            <a class="btn" href="https://arxiv.org" target="_blank">
-                <i class="fa-solid fa-file-lines"></i> arXiv
             </a>
             <a class="btn" href="https://youtube.com" target="_blank">
                 <i class="fa-brands fa-youtube"></i> Video
@@ -121,7 +118,7 @@
         <h2>Algorithm Suite</h2>
       </div>
 
-      <div class="section-content row-layout">
+      <div class="section-content">
         <div class="image-col">
           <img src="figs/algorithm.png" alt="Sensor Deployment Map" class="section-img">
         </div>
@@ -132,6 +129,34 @@
         </div>
       </div>
     </section>
+
+
+    <!-- ======= Field Test Section ======= -->
+    <section class="carousel-section">
+      <div class="section-header">
+        <h2>Field Test Campaigns</h2>
+      </div>
+
+      <div class="swiper-container fieldtest-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="figs/test1.jpg" alt="Field Test 1">
+          </div>
+          <div class="swiper-slide">
+            <img src="figs/test2.jpg" alt="Field Test 2">
+          </div>
+          <div class="swiper-slide">
+            <img src="figs/test3.jpg" alt="Field Test 3">
+          </div>
+        </div>
+
+        <!-- 分页和按钮 -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
 
     <section class="citation-section">
       <div class="section-header">
@@ -162,7 +187,7 @@
 
     <!-- 初始化脚本 -->
     <script>
-      const swiper = new Swiper('.swiper-container', {
+      const mainSwiper = new Swiper('.swiper-container', {
         loop: true,
         spaceBetween: 40,
         pagination: {
@@ -172,6 +197,19 @@
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
+        },
+      });
+
+      const fieldTestSwiper = new Swiper('.fieldtest-swiper', {
+        loop: true,
+        spaceBetween: 40,
+        pagination: {
+          el: '.fieldtest-swiper .swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.fieldtest-swiper .swiper-button-next',
+          prevEl: '.fieldtest-swiper .swiper-button-prev',
         },
       });
     </script>
