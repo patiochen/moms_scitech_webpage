@@ -683,13 +683,16 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 18px;
-  color: #555;
+  outline: none;
+  opacity: 0.6;
+  transition: opacity 0.2s, transform 0.2s;
 }
 
 
 .copy-btn:hover {
-  background: #ccc;
+  opacity: 1;                 /* 鼠标悬停时变亮 */
+  background: none !important; /* 确保悬停也没有颜色 */
+  transform: scale(1.1);      /* 轻微放大 */
 }
 
 .copy-btn i {
