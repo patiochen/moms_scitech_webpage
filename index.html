@@ -99,14 +99,12 @@
       <div class="section-content">
         <img src="figs/network.png" alt="Hardware Layout" class="section-img">
         <p>
-          The architecture includes distributed Raspberry Pi pods connected via low-latency TCP sockets.
-          Each pod consists of a high-resolution camera and edge-processing unit optimized for trajectory extraction.
+          The Multi- Object Monitoring System (MOMS) developed by the project team is a ground-based capability for simultaneously monitoring multiple heterogeneous mobile objects (e.g., UASs, crewed aircraft, birds, balloons, projectiles) in an airspace volume, encompassing detection, tracking, and classification functions. MOMS is a comprehensive solution which comprises: 1) a distributed architecture and hardware for sensing, computing, communications, and display; 2) a suite of algorithms that enable monitoring functions; and 3) software for data communications, device command, and instantiation of the monitoring algorithms.
         </p>
 
         <img src="figs/edgedevice.png" alt="Hardware Layout" class="section-img">
         <p>
-          The architecture includes distributed Raspberry Pi pods connected via low-latency TCP sockets.
-          Each pod consists of a high-resolution camera and edge-processing unit optimized for trajectory extraction.
+          MOMS consists of multiple passive sensors, including primarily imaging sensors (videocameras, infrared) and secondarily non-imaging sensors for UAS detection (e.g., for RF-signal detection), organized in two or more non-collocated platforms which we call pods. The sensors are mounted on rotating hinges which allow easy positioning of the sensor’s azimuth and elevation. Each sensor is connected by a cable with a microcontroller. A timing device is also connected with each microcontroller, which provides a synchronous global clock. A local area network is established for wireless communication among the devices on each pod, between the pods, and to/from a command-and-display node which has CPU- and GPU-based computing capabilities. Alternate wireless communication modalities including cellular-network-based and satellite-networkbased communications are also being developed.
         </p>
       </div>
     </section>
@@ -124,7 +122,7 @@
         </div>
         <div class="text-col">
           <p>
-            The deployment strategy places sensor pods along known UAV traffic corridors, ensuring overlapping field-of-view coverage. Each pod operates independently and communicates via local mesh networks to a central processing node.
+            A suite of interconnected algorithms has been developed for simultaneous  monitoring of multiple heterogeneous airspace objects. Broadly, the algorithm suite draws on core image processing methods but is specialized to exploit the physics-based dynamical properties of mobile airspace objects, and to allow for simultaneous monitoring of many objects. At its core, the algorithm suite is trajectory or track based, i.e. it uses dynamics-informed video processing algorithms to extract multiple object tracks from sensor data, and then achieves core monitoring functions primarily from the track data.
           </p>
         </div>
       </div>
@@ -164,14 +162,20 @@
       </div>
 
       <div class="bibtex-block">
-    <pre><code>@InProceedings{Zhu_2026_SciTech,
-      author    = {Zhu, Chenyan and Others},
-      title     = {Track-Vision: Real-Time Multi-Object Monitoring Using Non-Collocated Video Sensors},
-      booktitle = {AIAA SciTech Forum},
-      month     = {January},
-      year      = {2026},
-      pages     = {TBD}
-    }</code></pre>
+          <button class="copy-btn" onclick="copyBibtex()" title="Copy BibTeX">
+              <i class="fa-regular fa-copy"></i>
+          </button>
+
+        <pre id="bibtex-code"><code>@inbook{doi:10.2514/6.2026-2890,
+        author = {Chenyan Zhu and Oluwafemi Ajeigbe and Sandip Roy},
+        title = {Simultaneous Track-Monitoring of Multiple Mobile Airspace Objects Using Non-Collocated Video Sensors},
+        booktitle = {AIAA SCITECH 2026 Forum},
+        chapter = {},
+        pages = {},
+        doi = {10.2514/6.2026-2890},
+        URL = {https://arc.aiaa.org/doi/abs/10.2514/6.2026-2890},
+        }
+        }</code></pre>
       </div>
 
       <p class="credits">
@@ -212,6 +216,20 @@
           prevEl: '.fieldtest-swiper .swiper-button-prev',
         },
       });
+
+
+      function copyBibtex() {
+        const code = document.getElementById('bibtex-code').innerText;
+        navigator.clipboard.writeText(code).then(() => {
+          const icon = document.querySelector('.copy-btn i');
+          icon.classList.remove('fa-copy');
+          icon.classList.add('fa-check');
+          setTimeout(() => {
+            icon.classList.remove('fa-check');
+            icon.classList.add('fa-copy');
+          }, 1200);
+        });
+      }
     </script>
 
 </body>
