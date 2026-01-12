@@ -161,18 +161,22 @@ body {
   margin: 0 auto;       /* 居中 */
   height: 560px;
   position: relative;
+  overflow: hidden;
 }
 
 .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;          /* 💥 关键 */
+  overflow: hidden;         /* 💥 关键 */
 }
 
 .swiper-slide img {
   max-width: 100%;
   max-height: 520px;
   object-fit: contain;
+  display: block;
 }
 
 /* 小圆点分页样式 */
