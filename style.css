@@ -202,12 +202,13 @@ body {
 }
 
 
-.fieldtest-swiper .swiper-button-prev {
-  left: 30px;
+/* 所有按钮内缩固定距离（不贴边） */
+.swiper-button-prev {
+  left: 70px !important;
 }
 
-.fieldtest-swiper .swiper-button-next {
-  right: 30px;
+.swiper-button-next {
+  right: 70px !important;
 }
 
 
