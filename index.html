@@ -162,7 +162,7 @@
       </div>
 
       <div class="bibtex-block">
-          <button class="copy-btn" onclick="copyBibtex()" title="Copy BibTeX">
+          <button class="copy-btn" onclick="copyBibtex(this)" title="Copy BibTeX">
               <i class="fas fa-copy"></i>
           </button>
 
@@ -219,19 +219,32 @@
 
 
       function copyBibtex(button) {
-          const pre = button.parentElement.querySelector("pre");
-          const icon = button.querySelector("i");
-          const text = pre.innerText;
+            // 1. 更加稳妥地获取文本（通过 ID 获取，防止层级改变导致失效）
+            const codeElement = document.getElementById("bibtex-code");
+            const text = codeElement.innerText;
 
-          navigator.clipboard.writeText(text).then(() => {
-            icon.classList.remove("fa-copy");
-            icon.classList.add("fa-check");
+            // 2. 获取图标元素
+            const icon = button.querySelector("i");
 
-            setTimeout(() => {
-              icon.classList.remove("fa-check");
-              icon.classList.add("fa-copy");
-            }, 1000);
-          });
+            navigator.clipboard.writeText(text).then(() => {
+                // 3. 切换为对号图标
+                // 注意：有些版本的 FA 需要同时确保 fas 类存在
+                icon.classList.remove("fa-copy");
+                icon.classList.add("fa-check");
+
+                // 4. 设置反馈效果：按钮变绿 (可选)
+                button.style.backgroundColor = "#28a745";
+
+                setTimeout(() => {
+                    // 5. 还原图标
+                    icon.classList.remove("fa-check");
+                    icon.classList.add("fa-copy");
+                    // 还原按钮颜色
+                    button.style.backgroundColor = "";
+                }, 1500);
+            }).catch(err => {
+                console.error('无法复制: ', err);
+            });
         }
     </script>
 
