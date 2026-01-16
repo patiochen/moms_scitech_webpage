@@ -261,6 +261,31 @@ body {
     outline: none;
 }
 
+
+.video-grid {
+    display: grid;
+    /* 创建两列，每列宽度相等 */
+    grid-template-columns: repeat(2, 1fr);
+    /* 视频之间的间距 */
+    gap: 15px;
+    width: 100%;
+    max-width: 1000px; /* 可以根据需要限制整体宽度 */
+    margin: 0 auto;
+}
+
+.demo-video {
+    width: 100%; /* 让视频自动填满格子宽度 */
+    height: auto;
+    display: block;
+}
+
+/* 手机端自动变成一列 */
+@media (max-width: 600px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* =========================================
    4. Abstract 横栏区域 (关键修改)
    ========================================= */
